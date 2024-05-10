@@ -12,7 +12,7 @@ jobs:
       - name: Automatically add labels and assignees
         uses: actions/github-script@v7
         with:
-          #github-token: ${{ secrets.TOKEN }}
+          github-token: $token
           #github-token: $token
           result-encoding: string
           debug: true
@@ -24,4 +24,6 @@ jobs:
               title: "${{ github.event.issue.title }}",
               body: "${{ github.event.issue.body }}"
             })
+        env: # Or as an environment variable
+          token: ${{ secrets.TOKEN }}
           
