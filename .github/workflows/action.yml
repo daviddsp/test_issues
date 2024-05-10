@@ -18,7 +18,7 @@ jobs:
             
             github.rest.issues.create({
               owner: "daviddsp",
-              repo: "daviddsp/repo1",
+              repo: "repo1",
               title: "Test",
               body: "Test"
             })
