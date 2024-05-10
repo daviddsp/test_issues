@@ -1,0 +1,54 @@
+name: Issue Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["TestAbra/repo1"]
+assignees:
+  - daviddsp
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: flag
+    attributes:
+      label: Bandera
+      description: ¿A cuál bandera se relaciona tu reporte?
+      options:
+        - Easy Web
+        - Easy App
+        - Easy Backend
+        - Other
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Prioridad
+      description: ¿Cuál es la prioridad de tu incidente?
+      options:
+        - Alta
+        - Media
+        - Baja
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
