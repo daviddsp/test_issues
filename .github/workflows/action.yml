@@ -15,13 +15,12 @@ jobs:
           result-encoding: string
           debug: true
           script: |
-            console.log(context)
-
+            
             github.rest.issues.create({
               owner: "daviddsp",
               repo: "daviddsp/repo1",
-              title: "${{ github.event.issue.title }}",
-              body: "${{ github.event.issue.body }}"
+              title: "Test",
+              body: "Test"
             })
         env: # Or as an environment variable
           token: ${{ secrets.TOKEN }}
